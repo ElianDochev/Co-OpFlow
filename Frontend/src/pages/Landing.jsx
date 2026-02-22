@@ -114,6 +114,11 @@ const Landing = () => {
 
   {/* Content above the transparent background */}
   <div className="text-center relative z-10">
+            <img
+              src="/logo-trans-bg.png"
+              alt="Co-OpFlow logo"
+              className="mx-auto mb-8 h-24 w-24 object-contain drop-shadow-lg"
+            />
     <h1 className="font-space tracking-tighter text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 dark:text-white">
       <span className="block uppercase bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
         Find collaborators

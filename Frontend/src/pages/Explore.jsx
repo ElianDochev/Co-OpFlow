@@ -155,8 +155,13 @@ const Explore = () => {
             Explore Projects
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
-            Discover amazing projects and find opportunities to collaborate
+            Discover innovative projects and find opportunities to collaborate.
           </p>
+          <img
+            src="/logo-trans-bg.png"
+            alt="Co-OpFlow logo"
+            className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-lg"
+          />
         </div>
 
         {/* Search and Filters */}

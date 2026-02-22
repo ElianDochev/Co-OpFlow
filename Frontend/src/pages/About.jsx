@@ -52,13 +52,18 @@ const About = () => {
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-20">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-          About Co-OpFlow
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-          We're building the future of collaboration and innovation. Our platform connects talented individuals,
-          facilitates meaningful partnerships, and helps bring groundbreaking ideas to life.
-        </p>
+          <img
+            src="/logo-trans-bg.png"
+            alt="Co-OpFlow logo"
+            className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-lg"
+          />
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            About Co-OpFlow
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            We're building the future of collaboration and innovation. Our platform connects talented individuals,
+            facilitates meaningful partnerships, and helps bring groundbreaking ideas to life.
+          </p>
       </section>
 
       {/* Stats Section */}

@@ -34,6 +34,11 @@ const Home = () => {
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-20">
+        <img
+          src="/logo-trans-bg.png"
+          alt="Co-OpFlow logo"
+          className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-lg"
+        />
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
           Build Your Next Big Thing
         </h1>
