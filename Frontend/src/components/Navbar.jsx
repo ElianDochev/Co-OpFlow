@@ -37,8 +37,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-space font-bold tracking-tight text-gray-900 dark:text-white">
-              Co-OpFlow*
+            <Link to="/" className="flex items-center gap-2 text-xl font-space font-bold tracking-tight text-gray-900 dark:text-white">
+              <img
+                src="/logo-trans-bg.png"
+                alt="Co-OpFlow logo"
+                className="h-9 w-9 object-contain"
+              />
+              <span>Co-OpFlow</span>
             </Link>
             
             {/* Desktop Navigation - Only show navigation items if authenticated */}
