@@ -1,0 +1,50 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: coopflow_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: coopflow_db
+    volumes:
+      - mongodb_data:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - coopflow_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: coopflow_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URL=mongodb://admin:password123@mongodb:27017/coopflow_db?authSource=admin
+      - DATABASE_NAME=coopflow_db
+      - SECRET_KEY=your-secret-key-here-make-it-long-and-secure
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=True
+      - UPLOAD_DIR=uploads
+      - MAX_FILE_SIZE=5242880
+    volumes:
+      - ./uploads:/app/uploads
+    depends_on:
+      - mongodb
+    networks:
+      - coopflow_network
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  coopflow_network:
+    driver: bridge 
