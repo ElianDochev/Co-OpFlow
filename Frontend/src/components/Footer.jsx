@@ -143,26 +143,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Made with Bolt.new */}
-        <div className="mt-6 pt-6 border-t border-gray-200/20 dark:border-gray-700/20">
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-2 text-sm text-gray-500 dark:text-gray-400">
-            <span>Made with</span>
-            <HeartIcon className="h-4 w-4 text-red-500" />
-            <span>using</span>
-            <a
-              href="https://bolt.new"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-200"
-            >
-              Bolt.new
-            </a>
-            <span>•</span>
-            <span>Powered by AI</span>
-            <span>•</span>
-            <span>Built for innovators</span>
-          </div>
-        </div>
+        {/* Footer extras removed as requested */}
       </div>
     </footer>
   );
